@@ -1,0 +1,98 @@
+<div class="container">
+        <p>vehicle-create works!</p>
+        <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+                <div class="form-group">
+                        <label for="Name">Make</label>
+                        <input required ngModel name="make" #make="ngModel"  type="text" class="form-control">
+            <div class="alert alert-danger"  *ngIf="make.touched && !make.valid">
+            Make is Required
+            </div>
+                </div>
+                <div class="form-group">
+                        <label for="model">Model</label>
+                        <input required ngModel name="model" #model="ngModel"   type="text" class="form-control">
+                        <div class="alert alert-danger"  *ngIf="model.touched && !model.valid">
+                            Model is Required
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="Engine">Engine</label>
+                            <input required ngModel name="engine" #engine="ngModel"   type="text" class="form-control">
+                            <div class="alert alert-danger"  *ngIf="engine.touched && !engine.valid">
+                                Engine is Required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="Doors">Doors</label>
+                                <input required ngModel name="doors" #doors="ngModel"   type="text" class="form-control">
+                                <div class="alert alert-danger"  *ngIf="doors.touched && !doors.valid">
+                                 No Of Doors is Required
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="Wheels">Wheels</label>
+                                    <input required ngModel name="wheels" #wheels="ngModel"   type="text" class="form-control">
+                                    <div class="alert alert-danger"  *ngIf="wheels.touched && !wheels.valid">
+                                     No Of Wheels is Required
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <label for="bodytype">BodyType</label>
+                                        <input required ngModel name="bodytype" #bodytype="ngModel"   type="text" class="form-control">
+                                        <div class="alert alert-danger"  *ngIf="bodytype.touched && !bodytype.valid">
+                                         No Of Wheels is Required
+                                            </div>
+                                    </div>
+                    <div class="form-group">
+                            <button class="btn btn-primary">Submit</button>
+                         </div>
+             </form>
+               
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="productForm" (ngSubmit)="save(productForm.value)">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" formcontrolname="name" >
+            </td>
+        </tr>
+        <tr>
+            <td>Iscomplete</td>
+            <td>
+                <input type="text" formcontrolName="Iscomplete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="save">
+            </td>
+        </tr>
+    </table>
+</form> -->
+</div>
+

@@ -1,0 +1,57 @@
+<div class="container"  >
+<h3>Edit Existing Vehicle</h3>
+
+<form #editdata="ngForm" (ngSubmit)="Save(editdata.value)" >
+   
+        <div class="form-group" >
+                <label for="make">Make</label>
+                <input required ngModel name="make" #make="ngModel" value="{{vehicledetails.make}}"  type="text"  class="form-control">
+    <div class="alert alert-danger"  *ngIf="make.touched && !make.valid">
+    Make is Required
+    </div>
+        </div>
+        <div class="form-group">
+                <label for="model">Model</label>
+                <input required ngModel name="model" #model="ngModel" value="{{vehicledetails.model}}"  type="text" class="form-control">
+                <div class="alert alert-danger"  *ngIf="model.touched && !model.valid">
+                    Model is Required
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label for="Engine">Engine</label>
+                    <input required ngModel name="engine" #engine="ngModel" value="{{vehicledetails.engine}}"  type="text" class="form-control">
+                    <div class="alert alert-danger"  *ngIf="engine.touched && !engine.valid">
+                        Engine is Required
+                        </div>
+                </div>  
+                <div class="form-group">
+                        <label for="Doors">Doors</label>
+                        <input required ngModel name="doors" #doors="ngModel" value="{{vehicledetails.doors}}"  type="text" class="form-control">
+                        <div class="alert alert-danger"  *ngIf="doors.touched && !doors.valid">
+                         No Of Doors is Required
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="Wheels">Wheels</label>
+                            <input required ngModel name="wheels" #wheels="ngModel" value="{{vehicledetails.wheeels}}"  type="text" class="form-control">
+                            <div class="alert alert-danger"  *ngIf="wheels.touched && !wheels.valid">
+                             No Of Wheels is Required
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="bodytype">BodyType</label>
+                                <input required ngModel name="bodytype" #bodytype="ngModel" value="{{vehicledetails.bodyType}}"  type="text" class="form-control">
+                                <div class="alert alert-danger"  *ngIf="bodytype.touched && !bodytype.valid">
+                                 No Of Wheels is Required
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <button class="btn btn-primary">Save</button>
+                                 </div>
+                              
+</form>  
+            </div>
+      
+   
+
+
